@@ -2,7 +2,7 @@
 #define _COMMON_H_
 
 enum PLAYER {
-    None, White, Black
+    NONE, WHITE, BLACK
 };
 
 struct Move {

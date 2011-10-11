@@ -2,6 +2,7 @@
 #define _BOARD_H_
 
 #include "common.h"
+#include <list>
 
 class IBoard {
     virtual bool isValid(Move m)=0;
