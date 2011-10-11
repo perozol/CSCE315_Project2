@@ -9,8 +9,9 @@ class TestClient : public virtual IPlayer {
     PLAYER p;
 
     public:
-    void startGame(bool white);
+    void startGame(bool isWhite, IBoard* gameBoard);
     void moveMade(Move m);
+    void Think();
     void gameEnd(PLAYER winner);
 };
 
