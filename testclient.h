@@ -6,8 +6,12 @@
 
 class TestClient : public virtual IPlayer {
     IBoard* board;
+    PLAYER p;
 
+    public:
     void startGame(bool white);
     void moveMade(Move m);
     void gameEnd(PLAYER winner);
-}
+};
+
+#endif
