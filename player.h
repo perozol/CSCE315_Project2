@@ -5,7 +5,8 @@
 
 class IPlayer {
     virtual void startGame(bool isWhite, IBoard* gameBoard)=0;
-    void moveMade(Move m)=0;
+    virtual void moveMade(Move m)=0;
+    virtual void Think()=0;
     virtual void gameEnd(PLAYER winner)=0;
 };
 
