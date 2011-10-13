@@ -7,6 +7,9 @@
 class TestClient : public virtual IPlayer {
     IBoard* board;
     PLAYER p;
+    PLAYER *gameState;
+
+    void printBoard();
 
     public:
     void startGame(bool isWhite, IBoard* gameBoard);

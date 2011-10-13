@@ -2,8 +2,10 @@
 #define _PLAYER_H_
 
 #include "common.h"
+#include "board.h"
 
 class IPlayer {
+    public:
     virtual void startGame(bool isWhite, IBoard* gameBoard)=0;
     virtual void moveMade(Move m)=0;
     virtual void Think()=0;
