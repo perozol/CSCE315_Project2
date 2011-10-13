@@ -1,5 +1,8 @@
 #include "testclient.h"
 #include <cstdio>
+#include <string>
+#include <iostream>
+#include <sstream>
 
 void TestClient::startGame(bool isWhite, IBoard* gameBoard)
 {
@@ -22,5 +25,19 @@ void TestClient::Think()
 {
     printf("Player %d: Thinking...\n", p);
     do {
+        Move myMove;
+        std::string input;
+
+        printf("Player %d: Col for move? ", p);
+        getline(std::cin, input);
+        istringstream converter(input);
+        converter >> myMove.col;
+
+        printf("Player %d: Row for move? ", p);
+        getline(std::cin, input);
+        converter >> myMove.row;
+
+        printf("Player %d: Moving %d, %d\n", p, myMove.col, myMove.row);
     } while (!board->makeMove(myMove));
 }
+
